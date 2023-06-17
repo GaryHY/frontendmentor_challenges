@@ -123,16 +123,6 @@ body {
     background-color: var(--clr-neutral-100);
     border-radius: 0.5rem;
     overflow: hidden;
-    /* for the two column */
-    display:grid;
-    max-width: 600px;
-}
-
-@media(min-width:600px){
-    .product {
-        --content-padding:2rem;
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 .product__content {
@@ -170,7 +160,7 @@ body {
     display:inline-flex;
     justify-content:center;
     align-items:center;
-    gap:0.75rem;
+    gap:0.5rem;
 
     border: 0;
     border-radius: 0.5rem;
@@ -183,11 +173,14 @@ body {
 
 .button[data-icon="shopping-cart"]::before{
     content: "";
-    background-image: url("images/icon-cart.svg");
+    /* Une facon de faire */
+    /* background-image: url("images/icon-cart.svg"); */
 
     /* on tient cela du svg */
     width: 15px;
     height: 16px;
+    background:red;
+
 }
 
 .button:is(:hover, :focus){
