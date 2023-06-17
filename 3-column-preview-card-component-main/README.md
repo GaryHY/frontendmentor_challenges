@@ -1,3 +1,7 @@
+NOTE: Ici je vais me mettre mes notes sur les difficultes rencontrees lors 
+du challenge.
+Le plus gros probleme etait de faire des columns de meme taille et s'assurer de 
+l'alignement des boutons entre colonne
 # Frontend Mentor - 3-column preview card component
 
 ![Design preview for the 3-column preview card component coding challenge](./design/desktop-preview.jpg)
