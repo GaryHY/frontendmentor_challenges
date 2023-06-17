@@ -1,1 +1,56 @@
 /* Ici on met le css */
+:root {
+    --clr-primary: hsl(220, 15%, 55%);
+    --clr-secondary: hsl(0, 0%, 100%);
+    --clr-base: hsl(218, 44%, 22%);
+    --clr-accent: hsl(212, 45%, 89%);
+
+    --fw-base: 400;
+    --fw-bold: 700;
+
+    --ff-regular : 'Outfit', sans-serif;
+}
+
+/* un leger reset css : */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+    background-color: var(--clr-accent);
+    color: var(--clr-primary);
+    font-family: var(--ff-regular);
+    font-weight: var(--fw-base);
+    min-height: 100vh;
+    text-align:center;
+
+    display: grid;
+    place-items:center;
+
+    --padding: 1rem;
+    --border-radius: 0.5rem;
+}
+
+.card {
+    max-width: 300px;
+    max-height: 80vh;
+    background-color: white;
+    /* display:grid; */
+    /* place-items:center; */
+    padding: var(--padding);
+    border-radius: 0.5rem;
+}
+.card__image {
+    border-radius: var(--border-radius);
+}
+
+.card__content {
+    padding : var(--padding);
+}
+
+.card__title {
+    font-weight: var(--fw-bold);
+    color: var(--clr-base);
+    font-size: 1.4rem;
+}
