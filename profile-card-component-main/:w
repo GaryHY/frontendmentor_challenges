@@ -107,7 +107,7 @@ body {
     background-color: var(--clr-cyan);
     background-image: url("images/bg-pattern-top.svg"), url("images/bg-pattern-bottom.svg");
     background-repeat: no-repeat, no-repeat;
-    background-position: right 50vw bottom 40vh, left 50vw top 50vh;
+    background-position: 
 }
 
 .card {
@@ -143,9 +143,6 @@ body {
 .card-footer {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: .5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .column {
@@ -155,13 +152,9 @@ body {
 .card-footer-figure,
 .name {
     color: var(--clr-dark);
-    /* TODO: changr le font weight, je ne pense pas que celui ci corresponde visuellement */
     font-weight: var(--fw-bold);
-}
-.card-footer-figure {
-    font-size: 0.75rem;
 }
 
 .card-footer-title {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
 }
