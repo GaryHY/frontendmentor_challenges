@@ -1,1 +1,191 @@
 /* mon css */
+:root {
+
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue:  hsl(245, 75%, 52%);
+    --clr-very-pale: hsl(225, 100%, 98%);
+    --clr-desaturated: hsl(224, 23%, 55%);
+    --clr-dark: hsl(223, 47%, 23%);
+
+    --ff-base: 'Red Hat Display', sans-serif;
+    --fw-regular: 500;
+    --fw-semibold: 700;
+    --fw-bold: 900;
+    
+    --card-width: 25rem;
+}
+
+/* reset css */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utililites */
+
+.flex-group {
+    display:flex;
+    align-items:center;
+    flex-wrap: wrap;
+}
+
+.grid-flow{
+    display:grid;
+    align-items:center;
+    gap: 1rem;
+}
+
+.hero-image{
+    /* je fixe une taille pour faire plus simple */
+    max-width: var(--card-width);
+}
+.card-icon-music{
+    width: 40px;
+}
+
+/* general */
+
+body {
+    display:grid;
+    place-content: center;
+    color: var(--clr-desaturated);
+    font-weight: var(--fw-regular);
+    background-color: var(--clr-pale-blue);
+    text-align:center;
+    font-size: 12px;
+}
+
+/* special classes */
+.card{
+    /* NOTE: on test */
+    /* background-color: var(--clr-very-pale); */
+    background-color: white;
+    border-radius: 1rem;
+    max-width: var(--card-width);
+    overflow: hidden;
+}
+.card-content{
+    padding: 3rem;
+}
+.card-title{
+    font-size: 24px;
+    color: var(--clr-dark);
+    font-weight: var(--fw-bold);
+}
+
+.card-info {
+    justify-content: space-between;
+    background-color: var(--clr-very-pale);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    align-items:center;
+}
+.card-info-left {
+    gap: 1rem;
+}
+.card-info-text {
+    flex-direction: column;
+}
+.card-plan {
+    font-weight: var(--fw-semibold);
+    color: var(--clr-dark);
+}
+
+button {
+    text-decoration:none;
+    border: none;
+}
+
+.card-info-button {
+    text-decoration: underline;
+    color: var(--clr-bright-blue);
+    background-color: var(--clr-very-pale);
+    font-weight: var(--fw-semibold);
+}
+.button-payment{
+    background-color: var(--clr-bright-blue);
+    color:white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    margin-top: 1.1rem;
+}
+
+.button-cancel {
+    background-color: white;
+    color: var(--clr-desaturated);
+    text-decoration:none;
+    font-weight: var(--fw-semibold);
+}
+
