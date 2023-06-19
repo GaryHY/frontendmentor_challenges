@@ -98,17 +98,9 @@ img {
     /* TODO : add the filter */
 }
 
-picture {
-    position:relative;
-}
-
 .overlay {
-    position: absolute;
-    content: '';
     height: 100%;
     width: 100%;
-    left: 0;
-    top: 0;
     background-color: hsla(277, 64%, 61%, 0.6);
 }
 
