@@ -110,10 +110,10 @@ body {
 
 .title span {
     color: var(--clr-dark);
-    font-weight: var(--fw-bold);
 }
 
 .title:not(span){
+    color:red;
     font-weight: var(--fw-light);
 }
 
@@ -158,12 +158,8 @@ body {
     margin-left: auto;
 }
 .card-title{
-    /* NOTE: J'hesitee sur le font weight mais c'est un detail */
-    font-weight: var(--fw-bold);
-    font-weight: var(--fw-regular);
     color: var(--clr-dark);
 }
-
 .card-content {
     color: var(--clr-grey);
 }

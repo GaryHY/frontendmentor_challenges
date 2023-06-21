@@ -5,43 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
     <title>Frontend Mentor | Four card feature section</title>
 
 </head>
 
 <body>
 
-    <!-- NOTE: Ici c'est de la semantique  -->
-    <h1>Reliable, efficient delivery
-        <span>Powered by Technology</span>
-    </h1>
+    <div class="container">
 
-    <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is
-        successful</p>
+        <h1 class="title">Reliable, efficient delivery<br>
+            <span>Powered by Technology</span>
+        </h1>
+        <p class="lead">Our Artificial Intelligence powered tools use millions of project data points to ensure that
+            your project is
+            successful</p>
 
-    <div class="cards">
+        <div class="cards">
 
-        <div class="card">
-            <h2>Supervisor</h2>
-            <p>Monitors activity to identify project roadblocks</p>
-        </div>
-        <div class="card">
-            <h2>Team Builder</h2>
-            <p>Scans our talent network to create the optimal team for your project</p>
-        </div>
+            <div class="card" data-color="cyan">
+                <h2 class="card-title">Supervisor</h2>
+                <p class="card-content">Monitors activity to identify project roadblocks</p>
+                <img class="card-image" src="images/icon-supervisor.svg" alt="">
+            </div>
+            <div class="card" data-color="red">
+                <h2 class="card-title">Team Builder</h2>
+                <p class="card-content">Scans our talent network to create the optimal team for your project</p>
+                <img class="card-image" src="images/icon-team-builder.svg" alt="">
+            </div>
 
-        <div class="card">
-            <h2>Karma</h2>
-            <p>Regularly evaluates our talent to ensure quality</p>
-        </div>
+            <div class="card" data-color="orange">
+                <h2 class="card-title">Karma</h2>
+                <p class="card-content">Regularly evaluates our talent to ensure quality</p>
+                <img class="card-image" src="images/icon-karma.svg" alt="">
+            </div>
 
-        <div class="card">
-            <h2>Calculator</h2>
-            <p>Uses data from past projects to provide better delivery estimates</p>
-        </div>
+            <div class="card" data-color="blue">
+                <h2 class="card-title">Calculator</h2>
+                <p class="card-content">Uses data from past projects to provide better delivery estimates</p>
+                <img class="card-image" src="images/icon-calculator.svg" alt="">
+            </div>
 
-    </div>
+        </div> <!-- div cards -->
 
+    </div> <!-- div container -->
 </body>
 
 </html>

@@ -158,12 +158,9 @@ body {
     margin-left: auto;
 }
 .card-title{
-    /* NOTE: J'hesitee sur le font weight mais c'est un detail */
-    font-weight: var(--fw-bold);
     font-weight: var(--fw-regular);
     color: var(--clr-dark);
 }
-
 .card-content {
     color: var(--clr-grey);
 }
