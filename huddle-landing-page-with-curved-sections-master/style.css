@@ -1,10 +1,25 @@
+/* ici mon css */
 
-/* custom variables */
-:root {
-    color: red;
-}
+/* :root{} */
+
 
 /* reset css */
 
-/* custom classes */
+/* utiiites */
+.container {
+    padding: 4rem;
+}
 
+.wrapper {
+    padding: 2rem;
+}
+
+/* custom properties */
+
+
+
+/* On va juste override le border radius du style de button */
+.button-footer {
+
+    border-radius: 0;
+}
