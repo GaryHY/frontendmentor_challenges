@@ -1,5 +1,17 @@
 /* ici mon css */
-/* :root{} */
+:root{
+--clr-desaturated-dark-cyan: hsl(180, 29%, 50%);
+
+--clr-light-grayish-cyan : hsl(180, 52%, 96%);   /* (Background) */
+--clr-light-grayish-cyan : hsl(180, 31%, 95%);  /* (Filter Tablets) */
+--clr-dark-grayish-cyan: hsl(180, 8%, 52%);
+--clr-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+--ff-base: 'League Spartan', sans-serif;
+--fw-base: 500;
+--fw-bold: 700;
+}
+
 
 /* RESET CSS: */
 
@@ -73,13 +85,115 @@ select {
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important;
   }
+}
+
+/* utilites  */
+
+.flex-group{
+    display:flex;
+    align-items:center;
+}
+
+.flex-group[data-direction="column"]{
+    flex-direction:column;
 }
 
 /* general css */
 
+body {
+    font-family: var(--ff-base);
+    font-weight: var(--fw-base);
+    background-color: var(--clr-light-grayish-cyan);
+}
+
+header {
+    height: 150px;
+    background-image: url("images/bg-header-mobile.svg");
+    background-color: var(--clr-desaturated-dark-cyan);
+}
+
+@media (min-width: 600px){
+    header {
+        background-image: url("images/bg-header-desktop.svg");
+    }
+}
+
+.container {
+    padding: 3rem 8rem;
+}
+
+ul {
+    list-style-type:none;
+}
+
 /* custom properties */
+.card {
+    padding: 1rem 2rem;
+    border-left: 5px solid var(--clr-desaturated-dark-cyan);
+    color: var(--clr-desaturated-dark-cyan);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.new {
+    background-color: var(--clr-desaturated-dark-cyan);
+}
+
+.featured {
+    background-color: var(--clr-very-dark-grayish-cyan);
+}
+
+.new,
+.featured{
+    text-transform: uppercase;
+    color: white;
+    border-radius: 5rem;
+    padding: 0.05rem 0.6rem;
+}
+
+.job-content{
+    align-items:start;
+    margin-left: 1rem;
+}
+
+.job-title {
+    font-weight: var(--fw-bold);
+}
+
+.job-info,
+.job-features{
+    /* TODO: gerer le gap */
+    gap: 1rem;
+}
+.job-info {
+    color: var(--clr-dark-grayish-cyan);
+}
+
+.tags {
+    gap: 1rem;
+    color: var(--clr-desaturated-dark-cyan);
+}
 
 
+li {
+    padding: 0.2rem 0.4rem;
+    color: var(--clr-desaturated-dark-cyan);
+    background-color: var(--clr-light-grayish-cyan);
+}
+
+li:is(:hover, :focus-visible){
+    background-color: var(--clr-desaturated-dark-cyan);
+    color: white;
+}
+
+/* NOTE: Les cards sont en position relative pour que les logos */
+/*     soient en absolute avec un query media */
+
+/* NOTE: Tous les tags sont clickables et etablissent un filtre */
+
+/* NOTE: On click on ajoute le contenu de l'element filre a une liste */
+/* de filtre puis on gerer l'affichage apres filtre du contenu */
+/* du json par les les elements contenu dans la liste de filtres */
