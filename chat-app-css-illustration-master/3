@@ -10,6 +10,7 @@
 /* Gradients */
 --clr-light-magenta: hsl(293, 100%, 63%);
 --clr-light-violet: hsl(264, 100%, 61%);
+--clr-gradient: linear-gradient(var(--clr-light-magenta), var(--clr-light-violet));
 
 /* Secondary */
 
@@ -103,9 +104,9 @@ select {
 .container {
     display: grid;
     place-content: center;
-    place-items: center;
-    max-width: 1000px;
-    gap: 3rem;
+    /* TODO: verifier si la taille est bonne */
+    max-width: 600px;
+    gap: 5rem;
 }
 
 .grid-flow {
@@ -135,67 +136,25 @@ body {
     place-content: center;
     font-family: var(--ff-base);
     --gap: 0.5rem;
-    /* Le border radius que j'utilise dans l'app */
-    --br : 2.5rem;
-}
-
-body::before {
-     content: "";
-    position: absolute;
-    top: 0;
-    left: -13.125em;
-    width: 26.25em;
-    height: 70%;
-    background-image: linear-gradient(
-      to bottom,
-      var(--clr-light-magenta),
-      var(--clr-light-violet)
-    );
-    border-bottom-right-radius: 9999em;
-    border-bottom-left-radius: 9999em;
-    transition: height 200ms ease, width 200ms ease, left 200ms ease;
-}
-
-
-@media screen and (min-width: 1000px) {
-    body::before {
-      left: -6.25em;
-      height: 85%;
-    }
 }
 
 h1 {
-    font-weight: var(--fw-bold);
     color: var(--clr-desaturated-dark-violet);
 }
 
 /* custom style */
 .phone-illustration {
-    border-radius: var(--br);
-    border: 3px solid white; 
+    border-radius: 1rem;
+    border: 5px solid white; 
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     padding: 0.5rem;
-    position:relative;
-    max-width: 300px;
-}
-
-/* TODO: finir cet element */
-.white-band {
-    content: '';
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: red;
-    width: 40px;
-    width: 10px;
 }
 
 .header {
     background: linear-gradient(to right, var(--clr-light-violet), var(--clr-light-magenta));
-    gap: 1rem;
-    padding: 1rem 1rem;
-    border-radius: var(--br) var(--br) 0 0;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .avatar {
@@ -218,31 +177,29 @@ h1 {
 .messages {
     font-size: 0.5rem;
     background-color: var(--clr-light-grayish-violet);
-    padding: 0.5rem;
-    border-radius: 0 0 var(--br) var(--br);
 }
 
 .message {
     max-width: 60%;
     width: fit-content;
-    border-radius: 0.5rem; 
+    border-radius: 0.5rem;
 }
 
 .message, 
 .bookings,
 .input-message {
-    padding: 0.5rem; }
+    padding: 0.5rem;
+}
 
 .received { 
-    /* NOTE: Je ne trouvais pas la couleu dans le guide de style */
-    background-color: hsl(206, 6%, 92%);
+    /* TODO: trouver les bonnes couleurs */
+    background-color: var(--clr-light-grayish-violet);
     color: var(--clr-moderate-violet);
 }
 
 .sent { 
     background-color: white;    
     margin-left:auto;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .image-holder {
@@ -256,51 +213,16 @@ h1 {
 }
 
 .booking {
-    max-width: 80%;
+    max-width: 60%;
     display: flex;
     align-items:center;
     justify-content: space-between;
     padding: 0.5rem;
     color: white;
     background: linear-gradient(to left, var(--clr-light-violet), var(--clr-light-magenta));
-    border-radius: 0.5rem 0.5rem 0.5rem 0.2rem;
-}
-
-.left {
-    gap: 1ch;
-}
-
-.circle {
-    width: 2ch;
-    height: 2ch;
-    border-radius: 50%;
-    border: 1px solid white;
-    color: white;
 }
 
 .price {
     font-size: 0.75rem;
     font-weight: var(--fw-bold);
-}
-
-input {
-    width: 100%;
-    padding: 0.5rem;
-    border:none;
-    border-radius: 0.5rem;
-    color: var(--clr-grayish-blue);
-    font-weight: var(--fw-lightbold);
-}
-
-.send-button {
-    background-color: white;
-}
-
-.content {
-    --gap: 1.5rem;
-}
-
-.content-text {
-    color: var(--clr-dark-grayish-violet);
-
 }

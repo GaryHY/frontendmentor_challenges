@@ -16,7 +16,6 @@
     <div class="container">
         <div class="phone-illustration">
 
-            <div class="white-band"></div>
             <div class="header flex-group">
                 <img class="avatar" src="images/avatar.jpg" alt="">
                 <div class="header-text">
@@ -25,55 +24,49 @@
                 </div>
             </div>
 
-            <div class="messages flow-content">
-                <p class="message received">That sounds great. I’d be happy with that.</p>
-                <p class="message received">Could you send over some pictures of your dog, please?</p>
+            <div class="messages">
+                <p class="received">That sounds great. I’d be happy with that.</p>
+                <p class="received">Could you send over some pictures of your dog, please?</p>
 
                 <div class="image-holder flex-group">
                     <img class="dog-image" src="images/dog-image-1.jpg" alt="">
                     <img class="dog-image" src="images/dog-image-2.jpg" alt="">
                     <img class="dog-image" src="images/dog-image-3.jpg" alt="">
                 </div>
-                <p class="message sent">Here are a few pictures. She’s a happy girl!</p>
-                <p class="message sent">Can you make it?</p>
+                <p class="sent">Here are a few pictures. She’s a happy girl!</p>
+                <p class="sent">Can you make it?</p>
 
-                <p class="message received">She looks so happy! The time we discussed works. How long shall I take her
-                    out for?
+                <p class="received">She looks so happy! The time we discussed works. How long shall I take her out for?
                 </p>
 
-                <div class="bookings flow-content">
-                    <div class="booking">
-                        <div class="left flex-group">
-                            <div class="circle"> </div>
-                            <p class="walk-time">30 minute walk</p>
-                        </div>
-                        <p class="price">$29</p>
-                    </div>
-                    <div class="booking">
-                        <div class="left flex-group">
-                            <div class="circle"> </div>
-                            <p class="walk-time">1 hour walk</p>
-                        </div>
-                        <p class="price">$49</p>
-                    </div>
+                <div class="booking">
+                    <p>30 minute walk</p>
+                    <p class="price">$29</p>
+                </div>
+                <div class="booking">
+                    <p>1 hour walk</p>
+                    <p class="price">$49</p>
                 </div>
 
                 <div class="input-message flex-group">
                     <input type="text" placeholder="Type a message...">
-                    <button>
-                        <img class="send-button" src="images/favicon-32x32.png" alt="">
-                    </button>
+                    <img src="images/favicon-32x32.png" alt="">
                 </div>
             </div>
         </div>
 
-        <div class="content flow-content">
+        <div class="content">
             <h1 class="title">Simple booking</h1>
             <p class="content-text">Stay in touch with our dog walkers through the chat interface. This makes it easy to
                 discuss arrangements and make bookings. Once the walk has been completed you can rate your walker and
                 book again all through the chat.
             </p>
         </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
     </div>
 </body>
 
