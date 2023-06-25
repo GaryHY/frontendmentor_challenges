@@ -187,11 +187,10 @@ header {
     border-bottom-right-radius: 5px;
 }
 
-.filter-tag:is(:hover, :focus-visible)::after {
-    cursor: pointer;
+
+.filter-tag::after:is(:hover, :focus-visible) {
     background-color: var(--clr-very-dark-grayish-cyan);
 }
-
 .clear-button {
     border:none;
     text-decoration: underline;
@@ -250,6 +249,7 @@ header {
     color: var(--clr-dark-grayish-cyan);
 }
 .job-details-item::after {
+
     content: '';
     width: 3px;
     height: 3px;
@@ -263,13 +263,13 @@ header {
     display: none;
 }
 
-.tag {
+li {
     color: var(--clr-desaturated-dark-cyan);
     background-color: var(--clr-light-grayish-cyan);
     padding: var(--padding);
 }
 
-.tag:is(:hover, :focus-visible){
+li:is(:hover, :focus-visible){
     cursor: pointer;
     background-color: var(--clr-desaturated-dark-cyan);
     color: white;

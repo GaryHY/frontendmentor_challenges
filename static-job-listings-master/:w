@@ -15,31 +15,22 @@
 
 <body>
     <header></header>
-    <div class="filter-card flex-group">
-        <ul role="list" class="flex-group">
-            <li class="filter-tag">Frontend</li>
-            <li class="filter-tag">Frontend</li>
-            <li class="filter-tag">Frontend</li>
-        </ul>
-        <button class="clear-button">Clear</button>
-    </div>
-
     <div class="container flow-content">
         <div class="card flex-group">
             <div class="flex-group">
                 <img src="images/photosnap.svg" alt="">
                 <div class="flex-group job-content" data-direction="column">
                     <div class="flex-group">
-                        <!-- TODO: Voir si les classes en dessous servent a quelque chose -->
+                        <!-- TODO: voir si les classes en dessous servent a quelque chose -->
                         <p class="company">Photosnap</p>
                         <p class="new">New!</p>
                         <p class="featured">Featured</p>
                     </div>
                     <p class="job-title">Senior Frontend Developer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">1d ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">USA only</p>
+                        <p>1d ago</p>
+                        <p>Full Time</p>
+                        <p>USA only</p>
                     </div>
                 </div>
             </div>
@@ -66,9 +57,9 @@
                     </div>
                     <p class="job-title">Full Stack Developer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">1d ago</p>
-                        <p class="job-details-item">Part Time</p>
-                        <p class="job-details-item">Remote</p>
+                        <p>1d ago</p>
+                        <p>Part Time</p>
+                        <p>Remote</p>
                     </div>
                 </div>
             </div>
@@ -93,9 +84,9 @@
                     </div>
                     <p class="job-title">Junior Frontend Developer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">2d ago</p>
-                        <p class="job-details-item">Part Time</p>
-                        <p class="job-details-item">USA only</p>
+                        <p>2d ago</p>
+                        <p>Part Time</p>
+                        <p>USA only</p>
                     </div>
                 </div>
             </div>
@@ -122,9 +113,9 @@
                     </div>
                     <p class="job-title">Junior Front Developer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">5d ago</p>
-                        <p class="job-details-item">Contract</p>
-                        <p class="job-details-item">USA only</p>
+                        <p>5d ago</p>
+                        <p>Contract</p>
+                        <p>USA only</p>
                     </div>
                 </div>
             </div>
@@ -148,9 +139,9 @@
                     </div>
                     <p class="job-title">Software Engineer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">1w ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">Worldwide</p>
+                        <p>1w ago</p>
+                        <p>Full Time</p>
+                        <p>Worldwide</p>
                     </div>
                 </div>
             </div>
@@ -176,9 +167,9 @@
                     </div>
                     <p class="job-title">Junior Backend Developper</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">2w ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">UK only</p>
+                        <p>2w ago</p>
+                        <p>Full Time</p>
+                        <p>UK only</p>
                     </div>
                 </div>
             </div>
@@ -203,9 +194,9 @@
                     </div>
                     <p class="job-title">Junior Developper</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">2w ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">Worldwide</p>
+                        <p>2w ago</p>
+                        <p>Full Time</p>
+                        <p>Worldwide</p>
                     </div>
                 </div>
             </div>
@@ -231,9 +222,9 @@
                     </div>
                     <p class="job-title">Junior Frontend Developper</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">2w ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">USA only</p>
+                        <p>2w ago</p>
+                        <p>Full Time</p>
+                        <p>USA only</p>
                     </div>
                 </div>
             </div>
@@ -259,9 +250,9 @@
                     </div>
                     <p class="job-title">Full Stack Engineer</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">3w ago</p>
-                        <p class="job-details-item">Full Time</p>
-                        <p class="job-details-item">Worldwide</p>
+                        <p>3w ago</p>
+                        <p>Full Time</p>
+                        <p>Worldwide</p>
                     </div>
                 </div>
             </div>
@@ -288,9 +279,9 @@
                     </div>
                     <p class="job-title">Front-end Dev</p>
                     <div class="job-info flex-group">
-                        <p class="job-details-item">1mo ago</p>
-                        <p class="job-details-item">Part Time</p>
-                        <p class="job-details-item">Worldwide</p>
+                        <p>1mo ago</p>
+                        <p>Part Time</p>
+                        <p>Worldwide</p>
                     </div>
                 </div>
             </div>
@@ -309,7 +300,7 @@
 
     </div> <!-- end of the container div -->
 
-    <script src="./main.js"></script>
+
 </body>
 
 </html>
