@@ -24,6 +24,7 @@
     }
 }
 
+
 /* reset css */
 /* Box sizing rules */
 *,
@@ -140,17 +141,10 @@ body {
 .review {
     /* TODO: Ajouter les etoiles */
     background-color: var(--clr-neutral-light-gray);
-    background-image: url("images/icon-star.svg");
-    background-repeat: space;
     border-radius: 0.5rem;
     color: var(--clr-primary-magenta);
     font-weight: var(--fw-bold);
     padding: 1rem;
-}
-
-.review p::before {
-    content: '';
-    width: 100px;
 }
 
 .card {
