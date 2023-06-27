@@ -335,7 +335,7 @@ const clearFilter = () => {
 
 const addFilter = (filter) => {
     if (filterTags.includes(filter)){
-        // TODO: rajouter un element visuel pour que l'on puisse voir que cette operation n'entraine aucune action
+        // TODO: Rajouter un element visuel pour que l'on puisse voir que cette operation n'entraine aucune action
         console.log("On ne va pas ajouter ce filtre car il est deja present en fait");
     } else {
         let filterTagsCopy = Array.from(filterTags);
@@ -373,7 +373,6 @@ const toggleClass = (el, className) => {
     }
     el.classList.add(className);
 }
-
 
 init_page();
 handleClick();
