@@ -1,4 +1,3 @@
-/* ici on va refaire tout le css */
 :root {
 
     --clr-desaturated-dark-cyan: hsl(180, 29%, 50%);
@@ -170,6 +169,7 @@ header {
     padding-right: 45px;
 }
 
+/* TODO: Le probleme c'est que je ne peux cliquer que sur tout le button et pas que sur l'icone */
 .filter-tag::after {
     content: "";
     display: block;

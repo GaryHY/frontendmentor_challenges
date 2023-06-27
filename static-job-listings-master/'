@@ -201,7 +201,6 @@ let tool_filter = new Set();
 let role_filter = new Set();
 let level_filter = new Set();
 
-// Je pourrais le hard coder pour cet exemple mais flemme
 for (let job of data) {
     job.languages.map(language => language_filter.add(language))
     job.tools.map(tool => tool_filter.add(tool))
@@ -248,17 +247,11 @@ const buildCard = (card_data) => {
 const findIntersection = (arr1, arr2, arr3, arr4) => {
     let sum = [...arr1, ...arr2, ...arr3, ...arr4];
     const elementCount = sum.reduce((count, element) => {
-        count[element.id] = (count[element.id] || 0) + 1;
+        count[element] = (count[element] || 0) + 1;
         return count;
     }, {});
-
     const intersection = Object.keys(elementCount).filter(element => elementCount[element] === 4);
-    return searchJobById(intersection);
-}
-
-// Juste pour cet exercice et pour me simplifier la vie je vais supposer que les jobs sont ranges par id croissant
-const searchJobById = (list_id) => {
-    return list_id.map(id => data[Number(id)-1]); 
+    return intersection;
 }
 
 // Filters ce sont la liste de tous les filters applique
@@ -272,27 +265,29 @@ const getListFiltered = (filters) => {
     const filter_role = role_filter.filter(tag => filters.includes(tag));
     const filter_level = level_filter.filter(tag => filters.includes(tag)); 
 
-    let job_by_language = filter_lang.length ? data.filter(job => {
-        let ans = filter_lang.map(lang => job.languages.includes(lang));
-        return ans.reduce((prev, curr) => prev && curr);
-    }) : data; 
 
-    let job_by_tool = filter_tool.length ? data.filter(job => {
-            let ans = filter_tool.map(tool => job.tools.includes(tool));
-            return ans.reduce((prev, curr) => prev && curr);
-    }) : data; 
-
-    let job_by_role = filter_role.length ? data.filter(job => job.role === filter_role[0]) : data; 
-    let job_by_level = filter_level.length ? data.filter(job => job.level === filter_level[0]) : data; 
-    return findIntersection(job_by_role, job_by_level, job_by_tool, job_by_language);
+    let job_by_language = data.filter(job => job.languages.includes(filter_lang)); 
+    let job_by_tool = data.filter(job => job.tools.includes(filter_tool)); 
+    let job_by_role = data.filter(job => job.role.includes(filter_role)); 
+    let job_by_level = data.filter(job => job.level.includes(filter_level)); 
+    
+    let count = job_by_level > 0 + job_by_language > 0 + job_by_role > 0 + job_by_tool > 0;
+    console.log(count);
+    if (count > 1) {
+        return findIntersection(job_by_role, job_by_level, job_by_tool, job_by_language);
+    } else { 
+        // NOTE: Vu que les trois autress sont vides je peux les combiner et retouner la valeur
+        return [...job_by_tool, ...job_by_role, ...job_by_language, ...job_by_level];
+    }
 }
 
+
 // Une fonction pour mettre tous les listeners de click
+
 const handleClick = () => {
     let tags = document.querySelectorAll(".tag");
     let clearButton = document.querySelector(".clear-button");
     let removeFilter = document.querySelectorAll(".filter-tag");
-
     clearButton.addEventListener("click", () => {
         clearFilter();
     })
@@ -319,8 +314,8 @@ const handleChangeFilterTag = (filterTagsCopy) => {
             let data_jobs = getListFiltered(filterTags);
             let cards = data_jobs.map(job => buildCard(job)); 
             document.querySelector(".container").innerHTML = cards;
+            handleClick();
         }
-        handleClick();
     } else {
         console.log("Je ne modifie rien mais je ne dois pas me retrouver dans ce cas");
     }
@@ -330,19 +325,17 @@ const clearFilter = () => {
     let filterTagsCopy = Array.from(filterTags);
     filterTagsCopy = [];
     document.querySelector(".filter-list").innerHTML = `` ;
+    console.log(`The new filter tag list is : ${filterTagsCopy}`);
     handleChangeFilterTag(filterTagsCopy);
 }
 
 const addFilter = (filter) => {
-    if (filterTags.includes(filter)){
-        // TODO: rajouter un element visuel pour que l'on puisse voir que cette operation n'entraine aucune action
-        console.log("On ne va pas ajouter ce filtre car il est deja present en fait");
-    } else {
-        let filterTagsCopy = Array.from(filterTags);
-        filterTagsCopy.push(filter);
-        document.querySelector(".filter-list").innerHTML += ` <li class="filter-tag">${filter}</li> ` ;
-        handleChangeFilterTag(filterTagsCopy);
-    }
+    console.log("add");
+    let filterTagsCopy = Array.from(filterTags);
+    filterTagsCopy.push(filter);
+    console.log(`The new filter tag list is : ${filterTagsCopy}`);
+    document.querySelector(".filter-list").innerHTML += ` <li class="filter-tag">${filter}</li> ` ;
+    handleChangeFilterTag(filterTagsCopy);
 }
 
 const removeFilter = (filter) => {
@@ -357,24 +350,20 @@ const removeFilter = (filter) => {
         document.querySelector(".filter-list").innerHTML += ` <li class="filter-tag">${filter}</li> ` ;
 
     })
+    console.log(`The new filter tag list is : ${filterTagsCopy}`);
     handleChangeFilterTag(filterTagsCopy);
 }
 
+// TODO: Faire un truc pour initialiser le lancement ou cela affiche tous les jobs
+
 const init_page = () => {
+    // TODO: Mettre cela dans le handle page et lancer cette fonction si la liste filter est vide
     let init_cards = data.map(job => buildCard(job));
     document.querySelector(".container").innerHTML = init_cards;
 }
 
-// Une fonction pour toggle une classe, je l'utilise pour pouvoir rendre visible certains elements a certains moments
-const toggleClass = (el, className) => {
-    if (el.classList.contains(className)) {
-        el.classList.remove(className);
-        return;
-    }
-    el.classList.add(className);
-}
-
-
 init_page();
+
+
 handleClick();
 
